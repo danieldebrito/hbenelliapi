@@ -5,37 +5,29 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Pedidoitem extends Model { use HasFactory;
+class Ingrediente extends Model { use HasFactory;
 
-  protected $table = "pedidositem";
+  protected $table = "ingredientes";
     
     static $rules = [
     'id' => 'requred',
-		'idPedido' => 'requred',
-		'idCliente' => 'requred',
-		'idArticulo' => 'requred',
-    'idProducto' => 'requred',
-    'aplicacion' => 'requred',
-    'descripcionCorta' => 'requred',
+		'idIntegral' => 'requred',
+		'detalle' => 'requred',
 		'cantidad' => 'requred',
-    'preciolista' => 'requred',
-    'precioneto' => 'requred',
-    'preciocategorizado' => 'requred'
+    'unidad' => 'requred',
+    'updated_at' => 'requred',
+    'created_at' => 'requred',
     ];
 
     protected $perPage = 20;
 
     protected $fillable = [
       'id',
-      'idPedido',
-      'idCliente',
-      'idArticulo',
-      'idProducto',
-      'aplicacion',
-      'descripcionCorta',
+      'idIntegral',
+      'detalle',
       'cantidad',
-      'preciolista',
-      'precioneto',
-      'preciocategorizado'
+      'unidad',
+      'updated_at',
+      'created_at',
     ];
   }

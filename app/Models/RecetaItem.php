@@ -5,18 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Articulo extends Model { use HasFactory;
+class RecetaItem extends Model { use HasFactory;
 
-  protected $table = "articulos";
+  protected $table = "recetaitems";
     
     static $rules = [
     'id' => 'requred',
-		'idCategoria' => 'requred',
-    'idDetalle' => 'requred',
-		'codigo' => 'requred',
-		'nombre' => 'requred',
-    'peso' => 'requred',
-    'unidad' => 'requred',
+		'idIntegral' => 'requred',
+		'orden' => 'requred',
+		'detalle' => 'requred',
     'updated_at' => 'requred',
     'created_at' => 'requred',
     ];
@@ -25,12 +22,9 @@ class Articulo extends Model { use HasFactory;
 
     protected $fillable = [
       'id',
-      'idCategoria',
-      'idDetalle',
-      'codigo',
-      'nombre',
-      'peso',
-      'unidad',
+      'idIntegral',
+      'orden',
+      'detalle',
       'updated_at',
       'created_at',
     ];
