@@ -11,7 +11,8 @@ class Categoria extends Model { use HasFactory;
     
     static $rules = [
     'id' => 'requred',
-		'nombre' => 'requred',
+		'subcategoria' => 'requred',
+    'categoria' => 'requred',
     'updated_at' => 'requred',
     'created_at' => 'requred',
     ];
@@ -20,7 +21,8 @@ class Categoria extends Model { use HasFactory;
 
     protected $fillable = [
       'id',
-      'nombre',
+      'subcategoria',
+      'categoria',
       'updated_at',
       'created_at',
     ];
