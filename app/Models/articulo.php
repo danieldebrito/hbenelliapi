@@ -17,6 +17,7 @@ class Articulo extends Model { use HasFactory;
 		'nombre' => 'requred',
     'peso' => 'requred',
     'unidad' => 'requred',
+    'urlPhoto' => 'requred',
     'updated_at' => 'requred',
     'created_at' => 'requred',
     ];
@@ -31,6 +32,7 @@ class Articulo extends Model { use HasFactory;
       'nombre',
       'peso',
       'unidad',
+      'urlPhoto',
       'updated_at',
       'created_at',
     ];
