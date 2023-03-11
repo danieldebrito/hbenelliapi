@@ -5,14 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Categoria extends Model { use HasFactory;
+class Subrubro extends Model { use HasFactory;
 
-  protected $table = "categorias";
+  protected $table = "subrubros";
     
     static $rules = [
     'id' => 'requred',
-		'subcategoria' => 'requred',
-    'categoria' => 'requred',
+		'rubro' => 'requred',
+    'subrubro' => 'requred',
     'updated_at' => 'requred',
     'created_at' => 'requred',
     ];
@@ -21,8 +21,8 @@ class Categoria extends Model { use HasFactory;
 
     protected $fillable = [
       'id',
-      'subcategoria',
-      'categoria',
+      'rubro',
+      'subrubro',
       'updated_at',
       'created_at',
     ];

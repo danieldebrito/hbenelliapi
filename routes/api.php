@@ -23,11 +23,11 @@ Route::group(['middleware' => ['cors']], function () {
 });
 
 Route::group(['middleware' => ['cors']], function () {
-    Route::get('/categorias',[ CategoriaController::class, 'index']);
-    Route::post('/categorias',[ CategoriaController::class, 'store']);
-    Route::delete('/categorias/{id}',[ CategoriaController::class, 'destroy']);
-    Route::get('/categorias/{id}',[ CategoriaController::class, 'show']);
-    Route::post('/categorias/{id}',[ CategoriaController::class, 'update']);
+    Route::get('/subrubros',[ SubrubroController::class, 'index']);
+    Route::post('/subrubros',[ SubrubroController::class, 'store']);
+    Route::delete('/subrubros/{id}',[ SubrubroController::class, 'destroy']);
+    Route::get('/subrubros/{id}',[ SubrubroController::class, 'show']);
+    Route::post('/subrubros/{id}',[ SubrubroController::class, 'update']);
 });
 
 Route::group(['middleware' => ['cors']], function () {

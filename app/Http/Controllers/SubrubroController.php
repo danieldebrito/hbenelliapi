@@ -4,29 +4,28 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 //////////////////////////////////////////////
 use App\Http\Controllers\Controller;
-use App\Models\Categoria;
+use App\Models\Subrubro;
 
 
 /**
  * Class CategoriaController
  * @package App\Http\Controllers
  */
-class CategoriaController extends Controller
-{
+class SubrubroController extends Controller{
     public function show($id){
-        $data = Categoria::find($id);
+        $data = Subrubro::find($id);
 
         return response()->json($data, 200);
     }
 
     public function index(){
-        $data = Categoria::get();     
+        $data = Subrubro::get();     
 
         return response()->json($data, 200);
     }
 
     public function store(Request $request){
-        $Categorias = Categoria::create($request->all());
+        $Categorias = Subrubro::create($request->all());
         
         return response()->json([
             'message' => "Successfully created",
@@ -36,7 +35,7 @@ class CategoriaController extends Controller
 
     public function update(Request $request, $id){
 
-        Categoria::find($id)->update($request->all());
+        Subrubro::find($id)->update($request->all());
         
         return response()->json([
             'message' => "Successfully updated",
@@ -45,7 +44,7 @@ class CategoriaController extends Controller
       }
 
     public function destroy($id){
-        Categoria::find($id)->delete();
+        Subrubro::find($id)->delete();
 
         return response()->json([
             'message' => "Successfully deleted",
